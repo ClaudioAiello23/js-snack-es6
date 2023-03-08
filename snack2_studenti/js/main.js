@@ -1,5 +1,18 @@
 'use strict';
 
+/*
+****************************************************************
+FUNCTIONS
+*****************************************************************
+*/
+
+/*Function A -
+Funzione generica di tipo Arrow per associare variabile ad ID html*/
+const html_Id_Add = (id_Add) => document.getElementById(id_Add);
+
+// *************************************************************************
+
+
 // Creare l'Array inziale di Objects studenti
 const studentStartList = [
     {
@@ -82,3 +95,21 @@ const studentsUp_70_120 = studentStartList.filter((element) => {
 
 // stampare in console la Lista 3 "studenti con somma voti > 70 e id > 120"
 console.log('Lista 3 - Studenti voto superiore a 70 e id superiore a 120: ', studentsUp_70_120);
+
+
+/***********************************************************************
+UTILIZZO TAG HTML TEMPLATE (DIALOGO HTML-JS PER STAMPA LISTA SU DOM)
+************************************************************************/
+
+// LISTA 1 - Inizializzo variabili da associare ai relativi ID su html
+const template_list1 = html_Id_Add('list1_template'); //function A
+const ulList1Container = html_Id_Add('list1_container'); //function A
+
+// Lancio ciclo FOR-EACH con collegamento al Template Lista1 per stampa lista su Dom
+studentNames.forEach((element) =>{
+    const student_1 = element;
+    //Funzione per duplicare il template da HTML
+    const list1Template = template_list1.content.cloneNode(true);
+    list1Template.querySelector('.nb_list1_student').innerHTML = student_1;
+    ulList1Container.append(list1Template);
+ })

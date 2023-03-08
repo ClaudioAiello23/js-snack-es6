@@ -5,12 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studenti</title>
+    <!-- Collegamento link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- /Collegamento link Bootstrap -->
     <!-- Collegamento file Css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- /Collegamento file Css -->
 </head>
+
 <body>
-    
+    <main>
+        <div class="row justify-content-around">
+            <div class="col-3">
+                <ul id="list1_container">
+
+                </ul>
+            </div>
+            <div class="col-3">PROVA2</div>
+            <div class="col-3">PROVA3</div>
+        </div>
+    </main>
+
+    <!-- Creazione template per stampa Lista1 studenti (vedi file JS) -->
+    <template id="list1_template">
+        <li class="nb_list1_student"></li>
+    </template>
+    <!-- /Creazione template per stampa Lista1 studenti -->
+
     <!-- Collegamento file JavaScript -->
     <script src="js/main.js"></script>
     <!-- /Collegamento file JavaScript -->
