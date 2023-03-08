@@ -39,5 +39,18 @@ const studentStartList = [
     },
 ];
 
+// Stampare in console la lista iniziale di studenti (oggetti)
 console.log('Lista iniziale studenti: ', studentStartList);
+
+/*Creare una LISTA1 con solo il nome degli studenti in maiuscolo
+Utilizzlo un ciclo FOR IN ed estrapolo la chiave "nome" dalla lista
+di partenza, aggiungendo la stringa per il nome in maiuscolo*/
+const studentNames =[]; // creo l'array da riempire con i nomi studenti
+for (let key in (studentStartList)){
+    studentNames.push(studentStartList[key].nome.toUpperCase());
+}
+
+// stampare in console la lista 1 "nomi studenti(in maiuscolo)"
+console.log('Lista 1 - Nomi Studenti:' , studentNames);
+
 
