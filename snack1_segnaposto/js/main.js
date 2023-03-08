@@ -20,13 +20,13 @@ console.log('Nuovo Array degli invitati', newList);
 /* Avviare un ciclo MAP che, partendo dall'Array newList, prende l'elemento
 e l'indice di posizionamento e crea per ogni elemento dell'Array un oggetto
 contenente il nome, il posto, il nome_tavolo.*/
-const finalList = newList.map((element, index) => {
-       return{
-           nome: element,
-           posto: index + 1,
-           nome_tavolo: 'Tavolo Vip',
-       }
- })
+const finalList = newList.map((element, index) => 
+    ({
+        nome: element,
+        posto: index + 1,
+        nome_tavolo: 'Tavolo Vip',
+    })  
+);
 
 // Stampare in console la lista finale OBJECTS (segnaposto)
 console.log('Lista finale OGGETTI', finalList);
