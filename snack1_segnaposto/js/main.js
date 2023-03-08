@@ -16,9 +16,12 @@ newList.push('Damiano David', 'Victoria De Angelis', 'Thomas Raggi', 'Ethan Torc
 // Stampo in console la newList invitati aggiornata
 console.log('Nuovo Array degli invitati', newList);
 
-// Lanciare un ciclo MAP per trasformare in oggetti i miei invitati
+// Creo un Array vuoto che dovrà contenere i miei oggetti finali (segnaposto)
+const finalList = [];
+/*Lanciare un ciclo FOR-EACH per passare la NewList ed
+includere gli oggetti (nome, posto, nometavolo) nell'array finale*/
 newList.forEach((element, index) =>{
-   newList.push(
+   finalList.push(
         {
         nome: element,
         posto: index + 1,
@@ -29,7 +32,10 @@ newList.forEach((element, index) =>{
 }
 )
 
-console.log('Lista con oggetti', newList);
+console.log('Lista finale OGGETTI', finalList);
+
+
+
 
 
 
