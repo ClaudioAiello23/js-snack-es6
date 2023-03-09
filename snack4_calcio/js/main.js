@@ -114,7 +114,7 @@ const serieAstart = [
     }
 ];
 
-// Stampa iniziale Array di oggetti creato
+// Stampa Array iniziale di oggetti creato
 console.log('Serie A-iniziale:', serieAstart);
 
 /*Lancio di un ciclo MAP che cicla l'array di oggetti ed attribuisce
@@ -127,4 +127,28 @@ const serieAnew = serieAstart.map((element) => {
         return element;
 });
 
+// Stampa nuovo Array di oggetti modificato
 console.log('Serie A-modificata:', serieAnew);
+
+/*Destrutturare l'oggetto squadra di calcio selezionato - DESTRUCTURING)*/
+const [{nome: nome, falli_subiti}] = serieAnew;
+console.log([{nome, falli_subiti}])
+console.log(nome, falli_subiti)
+
+
+const finalRest = (...argument) => console.log(argument);
+
+let serieAfinal = [];
+
+serieAnew.forEach((element) => {
+    // serieAfinal = finalRest(element.nome, element.falli_subiti);
+    serieAfinal.push(finalRest(element.nome, element.falli_subiti));
+
+}
+
+);
+
+
+
+
+
