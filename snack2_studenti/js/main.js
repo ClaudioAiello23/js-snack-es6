@@ -125,7 +125,7 @@ studentsUp70.forEach((element) =>{
     //Funzione per duplicare il template da HTML
     const list2Template = template_list2.content.cloneNode(true);
     // Sostituisco nell'elemento html <li> il nome presente nell'ArrayObject e appendo al box <ul>
-    list2Template.querySelector('.nb_list2_student').innerHTML = student_2.nome;
+    list2Template.querySelector('.nb_list2_student').innerHTML = student_2.nome.toUpperCase();
     ulList2Container.append(list2Template);
  })
 
@@ -140,7 +140,7 @@ studentsUp_70_120.forEach((element) =>{
     //Funzione per duplicare il template da HTML
     const list3Template = template_list3.content.cloneNode(true);
     // Sostituisco nell'elemento html <li> il nome presente nell'ArrayObject e appendo al box <ul>
-    list3Template.querySelector('.nb_list3_student').innerHTML = student_3.nome;
+    list3Template.querySelector('.nb_list3_student').innerHTML = student_3.nome.toUpperCase();
     ulList3Container.append(list3Template);
  })
 

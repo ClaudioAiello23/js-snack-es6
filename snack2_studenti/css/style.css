@@ -1,3 +1,32 @@
+/**********************
+BODY
+**********************/
+
+body{
+    background-color: lightblue;
+}
+
+/**********************
+HEADER
+**********************/
+
+header{
+    background-color: rgb(142, 203, 224);
+    border-bottom: 2px solid black;
+}
+header h1{
+    color:blue;
+}
+
+/**********************
+MAIN
+**********************/
+
 main .row div{
-    border: 1px solid black;
+    border: 3px solid black;
+    background-color: rgb(142, 203, 224);
+}
+
+main h2{
+    font-size: 1.25rem;
 }
