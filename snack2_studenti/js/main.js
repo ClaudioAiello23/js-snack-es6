@@ -99,7 +99,8 @@ console.log('Lista 3 - Studenti voto superiore a 70 e id superiore a 120: ', stu
 UTILIZZO TAG HTML TEMPLATE (DIALOGO HTML-JS PER STAMPA LISTA SU DOM)
 ************************************************************************/
 
-// LISTA 1 - Inizializzo variabili da associare ai relativi ID su html
+/*LISTA 1 STUDENTI
+Inizializzo variabili da associare ai relativi ID su html*/
 const template_list1 = html_Id_Add('list1_template'); //function A
 const ulList1Container = html_Id_Add('list1_container'); //function A
 
@@ -108,12 +109,13 @@ studentNames.forEach((element) =>{
     const student_1 = element;
     //Funzione per duplicare il template da HTML
     const list1Template = template_list1.content.cloneNode(true);
+    // Sostituisco nell'elemento html <li> il nome presente nell'Array e appendo al box <ul>
     list1Template.querySelector('.nb_list1_student').innerHTML = student_1;
     ulList1Container.append(list1Template);
  })
 
-
- // LISTA 2 - Inizializzo variabili da associare ai relativi ID su html
+/*LISTA 2 STUDENTI
+Inizializzo variabili da associare ai relativi ID su html*/
 const template_list2 = html_Id_Add('list2_template'); //function A
 const ulList2Container = html_Id_Add('list2_container'); //function A
 
@@ -122,7 +124,23 @@ studentsUp70.forEach((element) =>{
     const student_2 = element;
     //Funzione per duplicare il template da HTML
     const list2Template = template_list2.content.cloneNode(true);
+    // Sostituisco nell'elemento html <li> il nome presente nell'ArrayObject e appendo al box <ul>
     list2Template.querySelector('.nb_list2_student').innerHTML = student_2.nome;
     ulList2Container.append(list2Template);
+ })
+
+ /*LISTA 3 STUDENTI
+Inizializzo variabili da associare ai relativi ID su html*/
+const template_list3 = html_Id_Add('list3_template'); //function A
+const ulList3Container = html_Id_Add('list3_container'); //function A
+
+// Lancio ciclo FOR-EACH con collegamento al Template Lista3 per stampa lista su Dom
+studentsUp_70_120.forEach((element) =>{
+    const student_3 = element;
+    //Funzione per duplicare il template da HTML
+    const list3Template = template_list3.content.cloneNode(true);
+    // Sostituisco nell'elemento html <li> il nome presente nell'ArrayObject e appendo al box <ul>
+    list3Template.querySelector('.nb_list3_student').innerHTML = student_3.nome;
+    ulList3Container.append(list3Template);
  })
 
