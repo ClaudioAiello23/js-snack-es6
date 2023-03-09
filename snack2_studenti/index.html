@@ -18,10 +18,14 @@
         <div class="row justify-content-around">
             <div class="col-3">
                 <ul id="list1_container">
-
+                    <!-- inserito con JS tag Template id=list1_template -->
                 </ul>
             </div>
-            <div class="col-3">PROVA2</div>
+            <div class="col-3">
+                <ul id="list2_container">
+                    <!-- inserito con JS tag Template id=list2_template -->
+                </ul>
+            </div>
             <div class="col-3">PROVA3</div>
         </div>
     </main>
@@ -31,7 +35,11 @@
         <li class="nb_list1_student"></li>
     </template>
     <!-- /Creazione template per stampa Lista1 studenti -->
-
+    <!-- Creazione template per stampa Lista2 studenti (vedi file JS) -->
+    <template id="list2_template">
+        <li class="nb_list2_student"></li>
+    </template>
+    <!-- /Creazione template per stampa Lista2 studenti -->
     <!-- Collegamento file JavaScript -->
     <script src="js/main.js"></script>
     <!-- /Collegamento file JavaScript -->

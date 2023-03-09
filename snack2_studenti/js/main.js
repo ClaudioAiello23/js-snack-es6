@@ -1,10 +1,8 @@
 'use strict';
 
-/*
-****************************************************************
+/*****************************************************************
 FUNCTIONS
-*****************************************************************
-*/
+*****************************************************************/
 
 /*Function A -
 Funzione generica di tipo Arrow per associare variabile ad ID html*/
@@ -113,3 +111,18 @@ studentNames.forEach((element) =>{
     list1Template.querySelector('.nb_list1_student').innerHTML = student_1;
     ulList1Container.append(list1Template);
  })
+
+
+ // LISTA 2 - Inizializzo variabili da associare ai relativi ID su html
+const template_list2 = html_Id_Add('list2_template'); //function A
+const ulList2Container = html_Id_Add('list2_container'); //function A
+
+// Lancio ciclo FOR-EACH con collegamento al Template Lista2 per stampa lista su Dom
+studentsUp70.forEach((element) =>{
+    const student_2 = element;
+    //Funzione per duplicare il template da HTML
+    const list2Template = template_list2.content.cloneNode(true);
+    list2Template.querySelector('.nb_list2_student').innerHTML = student_2.nome;
+    ulList2Container.append(list2Template);
+ })
+
