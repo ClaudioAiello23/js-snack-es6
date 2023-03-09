@@ -11,7 +11,7 @@ const genRandomNum = () => Math.floor(Math.random() * 100) + 1;
 // *************************************************************************
 
 // Creare l'Array iniziale Squadre di calcio Serie A
-const serieA = [
+const serieAstart = [
     {
         nome:'Atalanta',
         punti_fatti: 0,
@@ -114,5 +114,17 @@ const serieA = [
     }
 ];
 
+// Stampa iniziale Array di oggetti creato
+console.log('Serie A-iniziale:', serieAstart);
 
-console.log(serieA);
+/*Lancio di un ciclo MAP che cicla l'array di oggetti ed attribuisce
+la funzione di generazione numeri Random per le chiavi oggetto 
+"punti_fatti" e "falli_subiti"; il risultato sarà salvato in un
+nuovo Array Objects*/
+const serieAnew = serieAstart.map((element) => {
+        element.punti_fatti = genRandomNum();
+        element.falli_subiti = genRandomNum();
+        return element;
+});
+
+console.log('Serie A-modificata:', serieAnew);
