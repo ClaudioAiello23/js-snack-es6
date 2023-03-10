@@ -131,24 +131,17 @@ const serieAnew = serieAstart.map((element) => {
 console.log('Serie A-modificata:', serieAnew);
 
 /*Destrutturare l'oggetto squadra di calcio selezionato - DESTRUCTURING)*/
-const [{nome: nome, falli_subiti}] = serieAnew;
-console.log([{nome, falli_subiti}])
-console.log(nome, falli_subiti)
+const [{nome, falli_subiti}] = serieAnew;
+console.log([{nome, falli_subiti}]);
+console.log(nome, falli_subiti);
 
 
-const finalRest = (...argument) => console.log(argument);
-
-let serieAfinal = [];
-
-serieAnew.forEach((element) => {
-    // serieAfinal = finalRest(element.nome, element.falli_subiti);
-    serieAfinal.push(finalRest(element.nome, element.falli_subiti));
-
-}
-
+// SOLUZIONE ALTERNATIVA CON CREAZIONE OGGETTO METODO MAP
+const serieAfinal = serieAnew.map((element) =>
+({
+    nome: element.nome,
+    falli_subiti: element.falli_subiti,
+})
 );
-
-
-
-
+ console.log(serieAfinal);
 
