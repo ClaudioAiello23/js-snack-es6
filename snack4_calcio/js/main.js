@@ -132,16 +132,18 @@ console.log('Serie A-modificata:', serieAnew);
 
 /*Destrutturare l'oggetto squadra di calcio selezionato - DESTRUCTURING)*/
 const [{nome, falli_subiti}] = serieAnew;
-console.log([{nome, falli_subiti}]);
-console.log(nome, falli_subiti);
 
+// Creare una variabile per l'Array finale (che dovrà contenere solo nome squadra e falli subiti)
+const serieAfinal =[];
 
-// SOLUZIONE ALTERNATIVA CON CREAZIONE OGGETTO METODO MAP
-const serieAfinal = serieAnew.map((element) =>
-({
-    nome: element.nome,
-    falli_subiti: element.falli_subiti,
-})
-);
- console.log(serieAfinal);
+// Lancio un ciclo ForEach e pusho i valori nell'Array finale
+serieAnew.forEach(element => {
+    (element.nome, element.falli_subiti);
+    serieAfinal.push(element.nome, element.falli_subiti);
+    return element
+});
+
+// Stampo l'Array Finale
+console.log('Serie A finale: ', serieAfinal)
+
 
