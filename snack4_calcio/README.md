@@ -7,5 +7,6 @@ Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengo
 ESERCIZIO - SVOLGIMENTO (Ipotesi)
 - Creazione di un Array di oggetti contenente le 20 squadre di Serie A, indicando come chiavi "nome squadra" + "punti fatti" + "falli subiti"; di base per le chiavi "punti fatti" e "falli subiti" impostare un valore di partenza = 0.
 - Generazione numeri random per le proprietà "punti fatti" e "falli subiti"; si potrebbe creare una funzione per la generazione di numeri random, da applicare all'Array di oggetti; per l'attribuzione di questi valori random si potrebbe utilizzare un ciclo MAP.
-- Utilizzando il DESTRUCTORING, dall'Array completo di nome e numeri random (punti e falli subiti), estrapolare un Array finale i cui oggetti contengono solo il NOME e il FALLI SUBITI. Non dovranno essere considerati i PUNTI FATTI nell'array finale (valutare possibili soluzioni).
+- Utilizzando il DESTRUCTORING, dall'Array completo di nome e numeri random (punti e falli subiti), estrapolare un Array finale i cui oggetti contengono solo il NOME e i FALLI SUBITI. Non dovranno essere considerati i PUNTI FATTI nell'array finale.
+Optato per soluzione di destrutturazione valori direttamente in un ciclo con metodo MAP (al posto di "element", che costituisce l'oggetto intero, sono stati inseriti i valori destrutturati "punti" e "falli subiti").
 - Stampare in console l'Array finale.
