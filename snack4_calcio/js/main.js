@@ -130,20 +130,17 @@ const serieAnew = serieAstart.map((element) => {
 // Stampa nuovo Array di oggetti modificato
 console.log('Serie A-modificata:', serieAnew);
 
-/*Destrutturare l'oggetto squadra di calcio selezionato - DESTRUCTURING)*/
-const [{nome, falli_subiti}] = serieAnew;
-
-// Creare una variabile per l'Array finale (che dovrà contenere solo nome squadra e falli subiti)
-const serieAfinal =[];
-
-// Lancio un ciclo ForEach e pusho i valori nell'Array finale
-serieAnew.forEach(element => {
-    (element.nome, element.falli_subiti);
-    serieAfinal.push(element.nome, element.falli_subiti);
-    return element
+/*ciclo Map su serieAnew prendendo in considerazione punti fatti e falli
+falli_subiti, e salvare tutto nel nuovo array serieAfinal; in questo
+caso la destrutturazione (estrapolazione dei valori "nome" e "falli_subiti"
+dall'Array precedente) è stata fatta direttamente sul metodo MAP
+inserendo i valori destrutturati (nome e falli_subiti) al posto di
+"element"*/
+const serieAfinal = serieAnew.map (({nome, falli_subiti }) => {
+    return {nome, falli_subiti}
 });
 
-// Stampo l'Array Finale
+// Stampo in console l'Array Finale (punti fatti, falli subiti)
 console.log('Serie A finale: ', serieAfinal)
 
 
